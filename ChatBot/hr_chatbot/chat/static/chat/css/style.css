@@ -1,0 +1,118 @@
+/* chat/static/chat/css/style.css */
+
+/* Add this at the beginning of the file */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Update the body style */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Update the chat-container style */
+.chat-container {
+    width: 400px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.bot-message {
+    text-align: left;
+}
+
+.message span {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+}
+
+.user-message span {
+    background-color: #DCF8C6;
+}
+
+.bot-message span {
+    background-color: #E8E8E8;
+}
+
+.chat-input {
+    display: flex;
+    padding: 20px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
